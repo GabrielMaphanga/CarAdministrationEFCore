@@ -1,0 +1,220 @@
+03-Dec-2018 15:30:53.901 +02:00 [INF] User profile is available. Using 'C:\Users\Victor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+03-Dec-2018 15:30:55.118 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger  
+03-Dec-2018 15:30:55.118 +02:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:56457/  0
+03-Dec-2018 15:30:55.221 +02:00 [ERR] Connection id "0HLIP4E6KPGB9", Request id "0HLIP4E6KPGB9:00000001": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Unable to resolve service for type 'Swashbuckle.AspNetCore.Swagger.ISwaggerProvider' while attempting to Invoke middleware 'Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware'.
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.GetService(IServiceProvider sp, Type type, Type middleware)
+   at lambda_method(Closure , Object , HttpContext , IServiceProvider )
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass4_1.<UseMiddleware>b__2(HttpContext context)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+03-Dec-2018 15:30:55.224 +02:00 [INF] Request finished in 108.1812ms 200 
+03-Dec-2018 15:30:55.307 +02:00 [INF] Request finished in 192.0629ms 500 
+03-Dec-2018 15:31:39.729 +02:00 [INF] Entity Framework Core 2.1.4-rtm-31024 initialized 'CarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+03-Dec-2018 15:31:51.303 +02:00 [INF] Executed DbCommand (302ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [CarDB];
+03-Dec-2018 15:31:51.385 +02:00 [INF] Executed DbCommand (77ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CarDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+03-Dec-2018 15:31:51.469 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+03-Dec-2018 15:31:51.479 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+03-Dec-2018 15:31:51.481 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+03-Dec-2018 15:31:51.488 +02:00 [INF] Applying migration '20181203125701_Initial'.
+03-Dec-2018 15:31:51.506 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Cars] (
+    [Id] bigint NOT NULL IDENTITY,
+    [Make] nvarchar(max) NULL,
+    [Model] nvarchar(max) NULL,
+    [Year] int NOT NULL,
+    [HorsePower] int NOT NULL,
+    [TopSpeed] float NOT NULL,
+    CONSTRAINT [PK_Cars] PRIMARY KEY ([Id])
+);
+03-Dec-2018 15:31:51.509 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20181203125701_Initial', N'2.1.4-rtm-31024');
+03-Dec-2018 15:39:37.219 +02:00 [INF] User profile is available. Using 'C:\Users\Victor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+03-Dec-2018 15:39:38.067 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger  
+03-Dec-2018 15:39:38.067 +02:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:56457/  0
+03-Dec-2018 15:39:38.144 +02:00 [INF] Request finished in 80.3199ms 200 
+03-Dec-2018 15:39:38.144 +02:00 [ERR] Connection id "0HLIP4J2GL7TV", Request id "0HLIP4J2GL7TV:00000001": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Unable to resolve service for type 'Swashbuckle.AspNetCore.Swagger.ISwaggerProvider' while attempting to Invoke middleware 'Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware'.
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.GetService(IServiceProvider sp, Type type, Type middleware)
+   at lambda_method(Closure , Object , HttpContext , IServiceProvider )
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass4_1.<UseMiddleware>b__2(HttpContext context)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+03-Dec-2018 15:39:38.230 +02:00 [INF] Request finished in 166.7432ms 500 
+03-Dec-2018 15:39:41.109 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger  
+03-Dec-2018 15:39:41.110 +02:00 [ERR] Connection id "0HLIP4J2GL7TU", Request id "0HLIP4J2GL7TU:00000002": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Unable to resolve service for type 'Swashbuckle.AspNetCore.Swagger.ISwaggerProvider' while attempting to Invoke middleware 'Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware'.
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.GetService(IServiceProvider sp, Type type, Type middleware)
+   at lambda_method(Closure , Object , HttpContext , IServiceProvider )
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass4_1.<UseMiddleware>b__2(HttpContext context)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+03-Dec-2018 15:39:41.112 +02:00 [INF] Request finished in 2.723ms 500 
+03-Dec-2018 15:41:17.966 +02:00 [INF] User profile is available. Using 'C:\Users\Victor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+03-Dec-2018 15:41:18.919 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger  
+03-Dec-2018 15:41:18.919 +02:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:56457/  0
+03-Dec-2018 15:41:18.978 +02:00 [INF] Request finished in 60.8856ms 200 
+03-Dec-2018 15:41:19.103 +02:00 [INF] Request finished in 186.8467ms 301 
+03-Dec-2018 15:41:19.110 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger/index.html  
+03-Dec-2018 15:41:19.335 +02:00 [INF] Request finished in 224.5647ms 200 text/html
+03-Dec-2018 15:41:19.513 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger/swagger-ui.css  
+03-Dec-2018 15:41:19.522 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger/swagger-ui-bundle.js  
+03-Dec-2018 15:41:19.539 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger/swagger-ui-standalone-preset.js  
+03-Dec-2018 15:41:19.674 +02:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+03-Dec-2018 15:41:19.674 +02:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+03-Dec-2018 15:41:19.688 +02:00 [INF] Request finished in 174.8674ms 200 text/css
+03-Dec-2018 15:41:19.688 +02:00 [INF] Request finished in 148.9676ms 200 application/javascript
+03-Dec-2018 15:41:19.712 +02:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+03-Dec-2018 15:41:19.713 +02:00 [INF] Request finished in 191.0033ms 200 application/javascript
+03-Dec-2018 15:41:21.389 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger/v1/swagger.json  
+03-Dec-2018 15:41:21.565 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger/favicon-32x32.png  
+03-Dec-2018 15:41:21.569 +02:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+03-Dec-2018 15:41:21.569 +02:00 [INF] Request finished in 4.1596ms 200 image/png
+03-Dec-2018 15:41:21.662 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger/favicon-16x16.png  
+03-Dec-2018 15:41:21.662 +02:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+03-Dec-2018 15:41:21.662 +02:00 [INF] Request finished in 0.4956ms 200 image/png
+03-Dec-2018 15:41:22.022 +02:00 [INF] Request finished in 633.1586ms 200 application/json;charset=utf-8
+03-Dec-2018 15:56:20.255 +02:00 [INF] User profile is available. Using 'C:\Users\Victor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+03-Dec-2018 15:56:21.100 +02:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:56457/  0
+03-Dec-2018 15:56:21.100 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger/index.html  
+03-Dec-2018 15:56:21.182 +02:00 [INF] Request finished in 84.7956ms 200 
+03-Dec-2018 15:56:21.416 +02:00 [INF] Request finished in 319.5405ms 200 text/html
+03-Dec-2018 15:56:23.188 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger/v1/swagger.json  
+03-Dec-2018 15:56:23.496 +02:00 [ERR] Connection id "0HLIP4SDE2DRG", Request id "0HLIP4SDE2DRG:00000002": An unhandled exception was thrown by the application.
+System.NotSupportedException: Ambiguous HTTP method for action - CARSAmind.API.Controllers.CarsController.Post (CARSAmind.API). Actions require an explicit HttpMethod binding for Swagger 2.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.CreatePathItem(IEnumerable`1 apiDescriptions, ISchemaRegistry schemaRegistry)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.CreatePathItems(IEnumerable`1 apiDescriptions, ISchemaRegistry schemaRegistry)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath, String[] schemes)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+03-Dec-2018 15:56:23.568 +02:00 [INF] Request finished in 380.0525ms 500 
+03-Dec-2018 15:56:51.032 +02:00 [INF] User profile is available. Using 'C:\Users\Victor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+03-Dec-2018 15:56:51.977 +02:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:56457/  0
+03-Dec-2018 15:56:51.975 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger/index.html  
+03-Dec-2018 15:56:52.049 +02:00 [INF] Request finished in 78.3436ms 200 
+03-Dec-2018 15:56:52.293 +02:00 [INF] Request finished in 322.7994ms 200 text/html
+03-Dec-2018 15:56:53.499 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger/v1/swagger.json  
+03-Dec-2018 15:56:53.800 +02:00 [ERR] Connection id "0HLIP4SMK5HST", Request id "0HLIP4SMK5HST:00000002": An unhandled exception was thrown by the application.
+System.NotSupportedException: Ambiguous HTTP method for action - CARSAmind.API.Controllers.CarsController.Post (CARSAmind.API). Actions require an explicit HttpMethod binding for Swagger 2.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.CreatePathItem(IEnumerable`1 apiDescriptions, ISchemaRegistry schemaRegistry)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.CreatePathItems(IEnumerable`1 apiDescriptions, ISchemaRegistry schemaRegistry)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath, String[] schemes)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+03-Dec-2018 15:56:53.870 +02:00 [INF] Request finished in 370.9484ms 500 
+03-Dec-2018 15:57:18.774 +02:00 [INF] User profile is available. Using 'C:\Users\Victor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+03-Dec-2018 15:57:19.819 +02:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:56457/  0
+03-Dec-2018 15:57:19.819 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger/index.html  
+03-Dec-2018 15:57:19.880 +02:00 [INF] Request finished in 64.536ms 200 
+03-Dec-2018 15:57:20.130 +02:00 [INF] Request finished in 315.3607ms 200 text/html
+03-Dec-2018 15:57:21.374 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger/v1/swagger.json  
+03-Dec-2018 15:57:21.745 +02:00 [ERR] Connection id "0HLIP4SUUEOL2", Request id "0HLIP4SUUEOL2:00000002": An unhandled exception was thrown by the application.
+System.NotSupportedException: Ambiguous HTTP method for action - CARSAmind.API.Controllers.CarsController.Post (CARSAmind.API). Actions require an explicit HttpMethod binding for Swagger 2.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.CreatePathItem(IEnumerable`1 apiDescriptions, ISchemaRegistry schemaRegistry)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.CreatePathItems(IEnumerable`1 apiDescriptions, ISchemaRegistry schemaRegistry)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath, String[] schemes)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+03-Dec-2018 15:57:21.825 +02:00 [INF] Request finished in 451.2412ms 500 
+03-Dec-2018 15:58:13.081 +02:00 [INF] User profile is available. Using 'C:\Users\Victor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+03-Dec-2018 15:58:14.097 +02:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:56457/  0
+03-Dec-2018 15:58:14.097 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger/index.html  
+03-Dec-2018 15:58:14.164 +02:00 [INF] Request finished in 71.4588ms 200 
+03-Dec-2018 15:58:14.412 +02:00 [INF] Request finished in 319.8089ms 200 text/html
+03-Dec-2018 15:58:15.613 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger/v1/swagger.json  
+03-Dec-2018 15:58:16.014 +02:00 [INF] Request finished in 400.2345ms 200 application/json;charset=utf-8
+03-Dec-2018 15:59:09.797 +02:00 [INF] User profile is available. Using 'C:\Users\Victor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+03-Dec-2018 15:59:10.725 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger/index.html  
+03-Dec-2018 15:59:10.725 +02:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:56457/  0
+03-Dec-2018 15:59:10.788 +02:00 [INF] Request finished in 66.2629ms 200 
+03-Dec-2018 15:59:11.039 +02:00 [INF] Request finished in 317.8749ms 200 text/html
+03-Dec-2018 15:59:12.663 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger/v1/swagger.json  
+03-Dec-2018 15:59:13.151 +02:00 [INF] Request finished in 488.7542ms 200 application/json;charset=utf-8
+03-Dec-2018 16:00:00.666 +02:00 [INF] User profile is available. Using 'C:\Users\Victor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+03-Dec-2018 16:00:01.954 +02:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:56457/  0
+03-Dec-2018 16:00:01.954 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger/index.html  
+03-Dec-2018 16:00:02.015 +02:00 [INF] Request finished in 64.8046ms 200 
+03-Dec-2018 16:00:02.247 +02:00 [INF] Request finished in 297.1462ms 200 text/html
+03-Dec-2018 16:00:03.944 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger/v1/swagger.json  
+03-Dec-2018 16:00:04.266 +02:00 [ERR] Connection id "0HLIP4UF8GCO0", Request id "0HLIP4UF8GCO0:00000002": An unhandled exception was thrown by the application.
+System.NotSupportedException: Ambiguous HTTP method for action - CARSAmind.API.Controllers.CarsController.Post (CARSAmind.API). Actions require an explicit HttpMethod binding for Swagger 2.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.CreatePathItem(IEnumerable`1 apiDescriptions, ISchemaRegistry schemaRegistry)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.CreatePathItems(IEnumerable`1 apiDescriptions, ISchemaRegistry schemaRegistry)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath, String[] schemes)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+03-Dec-2018 16:00:04.326 +02:00 [INF] Request finished in 381.7851ms 500 
+03-Dec-2018 16:03:30.928 +02:00 [INF] User profile is available. Using 'C:\Users\Victor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+03-Dec-2018 16:03:32.010 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger/index.html  
+03-Dec-2018 16:03:32.010 +02:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:56457/  0
+03-Dec-2018 16:03:32.095 +02:00 [INF] Request finished in 89.8149ms 200 
+03-Dec-2018 16:03:32.401 +02:00 [INF] Request finished in 396.499ms 200 text/html
+03-Dec-2018 16:03:33.744 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger/v1/swagger.json  
+03-Dec-2018 16:03:34.261 +02:00 [INF] Request finished in 516.9294ms 200 application/json;charset=utf-8
+03-Dec-2018 16:04:06.728 +02:00 [INF] User profile is available. Using 'C:\Users\Victor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+03-Dec-2018 16:04:07.625 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger/index.html  
+03-Dec-2018 16:04:07.625 +02:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:56457/  0
+03-Dec-2018 16:04:07.703 +02:00 [INF] Request finished in 81.007ms 200 
+03-Dec-2018 16:04:07.963 +02:00 [INF] Request finished in 341.8138ms 200 text/html
+03-Dec-2018 16:04:09.317 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger/v1/swagger.json  
+03-Dec-2018 16:04:09.805 +02:00 [INF] Request finished in 488.4928ms 200 application/json;charset=utf-8
+03-Dec-2018 16:04:29.479 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/api/Cars  
+03-Dec-2018 16:04:29.623 +02:00 [INF] Route matched with {action = "Get", controller = "Cars"}. Executing action CARSAmind.API.Controllers.CarsController.Get (CARSAmind.API)
+03-Dec-2018 16:04:29.827 +02:00 [INF] Executing action method CARSAmind.API.Controllers.CarsController.Get (CARSAmind.API) - Validation state: "Valid"
+03-Dec-2018 16:04:29.834 +02:00 [INF] Getting  Cars 
+03-Dec-2018 16:04:30.175 +02:00 [INF] Entity Framework Core 2.1.4-rtm-31024 initialized 'CarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+03-Dec-2018 16:04:30.565 +02:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[HorsePower], [c].[Make], [c].[Model], [c].[TopSpeed], [c].[Year]
+FROM [Cars] AS [c]
+03-Dec-2018 16:04:30.596 +02:00 [INF] Executed action method CARSAmind.API.Controllers.CarsController.Get (CARSAmind.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 759.076ms.
+03-Dec-2018 16:04:30.611 +02:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CARSAmind.API.Models.Car, CARSAmind.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+03-Dec-2018 16:04:30.629 +02:00 [INF] Executed action CARSAmind.API.Controllers.CarsController.Get (CARSAmind.API) in 1000.3121000000001ms
+03-Dec-2018 16:04:30.630 +02:00 [INF] Request finished in 1151.0927ms 200 application/json; charset=utf-8
+06-Dec-2018 12:01:14.253 +02:00 [INF] User profile is available. Using 'C:\Users\Victor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+06-Dec-2018 12:01:16.084 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger  
+06-Dec-2018 12:01:16.084 +02:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:56457/  0
+06-Dec-2018 12:01:16.287 +02:00 [INF] Request finished in 206.0926ms 200 
+06-Dec-2018 12:01:16.354 +02:00 [INF] Request finished in 274.4238ms 301 
+06-Dec-2018 12:01:16.374 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger/index.html  
+06-Dec-2018 12:01:16.693 +02:00 [INF] Request finished in 319.406ms 200 text/html
+06-Dec-2018 12:01:16.870 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger/swagger-ui-bundle.js  
+06-Dec-2018 12:01:16.904 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger/swagger-ui-standalone-preset.js  
+06-Dec-2018 12:01:16.904 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger/swagger-ui.css  
+06-Dec-2018 12:01:17.106 +02:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+06-Dec-2018 12:01:17.107 +02:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+06-Dec-2018 12:01:17.138 +02:00 [INF] Request finished in 233.5113ms 200 text/css
+06-Dec-2018 12:01:17.138 +02:00 [INF] Request finished in 233.9394ms 200 application/javascript
+06-Dec-2018 12:01:17.222 +02:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+06-Dec-2018 12:01:17.222 +02:00 [INF] Request finished in 352.4548ms 200 application/javascript
+06-Dec-2018 12:01:18.503 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger/v1/swagger.json  
+06-Dec-2018 12:01:19.662 +02:00 [INF] Request finished in 1158.6671ms 200 application/json;charset=utf-8
+06-Dec-2018 12:01:42.374 +02:00 [INF] User profile is available. Using 'C:\Users\Victor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+06-Dec-2018 12:01:43.278 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger/index.html  
+06-Dec-2018 12:01:43.278 +02:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:56457/  0
+06-Dec-2018 12:01:43.354 +02:00 [INF] Request finished in 78.8534ms 200 
+06-Dec-2018 12:01:43.603 +02:00 [INF] Request finished in 328.5013ms 200 text/html
+06-Dec-2018 12:01:45.068 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:44358/swagger/v1/swagger.json  
+06-Dec-2018 12:01:45.531 +02:00 [INF] Request finished in 462.7949ms 200 application/json;charset=utf-8
